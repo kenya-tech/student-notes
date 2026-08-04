@@ -41,3 +41,47 @@ color:black;
 a{
 text-decoration:none;
 }
+.note-card{
+background:white;
+max-width:600px;
+margin:auto;
+padding:30px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.note-card p{
+line-height:1.6;
+}
+
+.buttons{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+background:#0b57d0;
+color:white;
+padding:12px 20px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn:hover{
+opacity:0.9;
+}
+
+.info{
+margin-top:20px;
+font-size:14px;
+color:gray;
+}
+
+.back-btn{
+text-decoration:none;
+font-weight:bold;
+}
