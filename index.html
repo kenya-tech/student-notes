@@ -8,12 +8,25 @@
 <body>
 
 <header>
-<h1>StudentNotes</h1>
+<h1>📚 StudentNotes</h1>
 <p>Your Academic Notes Hub</p>
 </header>
 
-
 <section class="hero">
+
+<h2>Find Your Notes Fast</h2>
+
+<input
+type="text"
+id="searchBox"
+placeholder="Search unit code or unit name..."
+onkeyup="searchUnits()">
+
+<br><br>
+
+<div id="searchResults"></div>
+
+<br><br>
 
 <h2>Select Your Year</h2>
 
@@ -21,27 +34,29 @@
 
 <a href="firstyear.html" class="card">
 <h3>First Year</h3>
+<p>View Units</p>
 </a>
-
 
 <a href="secondyear.html" class="card">
 <h3>Second Year</h3>
+<p>View Units</p>
 </a>
 
-
-<div class="card">
+<a href="thirdyear.html" class="card">
 <h3>Third Year</h3>
-</div>
+<p>View Units</p>
+</a>
 
-
-<div class="card">
+<a href="fourthyear.html" class="card">
 <h3>Fourth Year</h3>
-</div>
+<p>View Units</p>
+</a>
 
 </div>
 
 </section>
 
+<script src="app.js"></script>
 
 </body>
 </html>
