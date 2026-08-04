@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>StudentNotes</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
+
 <header>
+
 <h1>📚 StudentNotes</h1>
+
 <p>Your Academic Notes Hub</p>
+
 </header>
+
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="#">Notes</a>
+
+<a href="#">About</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+
+
 
 <section class="hero">
 
+
 <h2>Find Your Notes Fast</h2>
+
 
 <input
 type="text"
@@ -22,41 +47,162 @@ id="searchBox"
 placeholder="Search unit code or unit name..."
 onkeyup="searchUnits()">
 
-<br><br>
+
 
 <div id="searchResults"></div>
 
-<br><br>
 
-<h2>Select Your Year</h2>
 
-<div class="cards">
+<div class="stats">
 
-<a href="firstyear.html" class="card">
-<h3>First Year</h3>
-<p>View Units</p>
-</a>
 
-<a href="secondyear.html" class="card">
-<h3>Second Year</h3>
-<p>View Units</p>
-</a>
+<div class="stat-card">
 
-<a href="thirdyear.html" class="card">
-<h3>Third Year</h3>
-<p>View Units</p>
-</a>
+<h3>4+</h3>
 
-<a href="fourthyear.html" class="card">
-<h3>Fourth Year</h3>
-<p>View Units</p>
-</a>
+<p>First Year Units</p>
 
 </div>
 
+
+
+<div class="stat-card">
+
+<h3>5+</h3>
+
+<p>Second Year Units</p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<h3>9+</h3>
+
+<p>Available Units</p>
+
+</div>
+
+
+</div>
+
+
+
+
+<h2>Select Your Year</h2>
+
+
+
+<div class="cards">
+
+
+
+<a href="firstyear.html" class="card">
+
+<h3>First Year</h3>
+
+<p>View Units</p>
+
+</a>
+
+
+
+<a href="secondyear.html" class="card">
+
+<h3>Second Year</h3>
+
+<p>View Units</p>
+
+</a>
+
+
+
+<a href="thirdyear.html" class="card">
+
+<h3>Third Year</h3>
+
+<p>Coming Soon</p>
+
+</a>
+
+
+
+<a href="fourthyear.html" class="card">
+
+<h3>Fourth Year</h3>
+
+<p>Coming Soon</p>
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+<h2>Popular Notes</h2>
+
+
+
+<div class="cards">
+
+
+
+<a href="unit.html?code=DFA3111" class="card">
+
+<h3>DFA3111</h3>
+
+<p>Financial Accounting I</p>
+
+</a>
+
+
+
+<a href="unit.html?code=DBS3101" class="card">
+
+<h3>DBS3101</h3>
+
+<p>Introduction to Business</p>
+
+</a>
+
+
+
+<a href="unit.html?code=DMQ3111" class="card">
+
+<h3>DMQ3111</h3>
+
+<p>Quantitative Methods</p>
+
+</a>
+
+
+
+</div>
+
+
+
+
 </section>
+
+
+
+
+<footer>
+
+<p>© 2026 StudentNotes | Learn smarter</p>
+
+</footer>
+
+
 
 <script src="app.js"></script>
 
+
 </body>
+
 </html>
