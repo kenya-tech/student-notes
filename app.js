@@ -82,3 +82,45 @@ document.getElementById("download").href=file;
 
 
 }
+function searchUnits(){
+
+const query =
+document.getElementById("searchBox")
+.value
+.toLowerCase();
+
+const results =
+document.getElementById("searchResults");
+
+if(!results) return;
+
+if(query.length < 2){
+results.innerHTML = "";
+return;
+}
+
+let html = "";
+
+for(let code in units){
+
+let unit = units[code];
+
+if(
+code.toLowerCase().includes(query) ||
+unit.name.toLowerCase().includes(query)
+){
+
+html += `
+<a href="unit.html?code=${code}" class="card">
+<h3>${code}</h3>
+<p>${unit.name}</p>
+</a>
+`;
+
+}
+
+}
+
+results.innerHTML = html;
+
+}
