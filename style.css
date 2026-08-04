@@ -101,3 +101,22 @@ gap:15px;
 flex-wrap:wrap;
 margin-top:20px;
 }
+.stats{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.stat-card{
+background:white;
+padding:20px;
+width:180px;
+border-radius:10px;
+box-shadow:0 3px 10px #ccc;
+}
+
+.stat-card h3{
+margin:0;
+font-size:28px;
+}
