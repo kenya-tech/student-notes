@@ -2,8 +2,11 @@
 <html>
 
 <head>
+
 <title>Login - StudentNotes</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 
@@ -12,9 +15,9 @@
 
 <header>
 
-<h1>🔐 Student Login</h1>
+<h1>🔐 StudentNotes</h1>
 
-<p>Access your StudentNotes account</p>
+<p>Login or create your account</p>
 
 </header>
 
@@ -26,45 +29,61 @@
 <div class="note-card">
 
 
-<h2>Welcome Back</h2>
+<h2>Welcome</h2>
 
 
-<input 
+<input
 type="email"
+id="email"
 placeholder="Email address"
-class="input-box">
-
+class="input-box"
+>
 
 
 <br><br>
 
 
-<input 
+<input
 type="password"
+id="password"
 placeholder="Password"
-class="input-box">
-
+class="input-box"
+>
 
 
 <br><br>
 
 
-<button class="btn">
+<button class="btn" id="loginBtn">
 Login
 </button>
 
 
+<br><br>
+
+
+<button class="btn" id="registerBtn">
+Create Account
+</button>
+
+
+<br><br>
+
+
+<button class="btn" id="googleBtn">
+Continue with Google
+</button>
+
+
+<p id="message"></p>
+
 
 <p>
-Don't have an account?
-<a href="#">
-Register
-</a>
+<a href="index.html">← Back to StudentNotes</a>
 </p>
 
 
 </div>
-
 
 
 </section>
@@ -76,6 +95,108 @@ Register
 <p>© 2026 StudentNotes</p>
 
 </footer>
+
+
+
+<script type="module">
+
+import {
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+    signInWithPopup
+} from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
+
+import {
+    auth,
+    googleProvider
+} from "./firebase.js";
+
+
+
+const email = document.getElementById("email");
+
+const password = document.getElementById("password");
+
+const message = document.getElementById("message");
+
+const loginBtn = document.getElementById("loginBtn");
+
+const registerBtn = document.getElementById("registerBtn");
+
+const googleBtn = document.getElementById("googleBtn");
+
+
+
+loginBtn.addEventListener("click", async () => {
+
+    try {
+
+        await signInWithEmailAndPassword(
+            auth,
+            email.value,
+            password.value
+        );
+
+        message.textContent = "✅ Login successful!";
+
+        window.location.href = "index.html";
+
+    } catch (error) {
+
+        message.textContent = "❌ " + error.message;
+
+    }
+
+});
+
+
+
+registerBtn.addEventListener("click", async () => {
+
+    try {
+
+        await createUserWithEmailAndPassword(
+            auth,
+            email.value,
+            password.value
+        );
+
+        message.textContent = "✅ Account created!";
+
+        window.location.href = "index.html";
+
+    } catch (error) {
+
+        message.textContent = "❌ " + error.message;
+
+    }
+
+});
+
+
+
+googleBtn.addEventListener("click", async () => {
+
+    try {
+
+        await signInWithPopup(
+            auth,
+            googleProvider
+        );
+
+        message.textContent = "✅ Google login successful!";
+
+        window.location.href = "index.html";
+
+    } catch (error) {
+
+        message.textContent = "❌ " + error.message;
+
+    }
+
+});
+
+</script>
 
 
 </body>
